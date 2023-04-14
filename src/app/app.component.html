@@ -1,0 +1,21 @@
+<div class="row container">
+  <h1>MILIONARIO</h1>
+  
+  <div class="col-12">
+      <app-punteggio [punteggio]="livello"></app-punteggio>
+  </div>
+  <div class="col-12">
+      <app-domanda [domanda]="domanda" ></app-domanda>
+  </div>
+  <div class="col-6">
+    <app-risposta *ngFor="let risp of domanda.risposte"
+      [risposta]="risp" (rispAccesa)="rispostaAccesa($event)" >
+    </app-risposta>
+  </div>
+  
+  <div class="col-6">
+    <app-aiuto [domanda]="domanda">
+  
+    </app-aiuto>
+  </div>
+</div>

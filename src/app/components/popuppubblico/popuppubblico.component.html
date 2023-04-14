@@ -1,0 +1,13 @@
+<div class="main row" matDialogContent>
+    <div *ngFor="let i of percentuale; let indice = index" class="col-12">   
+        <i class="bi bi-people-fill"></i>
+        <span>
+           Il pubblico ha votato <b> {{i}}% </b> l'opzione {{risposte[indice].testo}}
+        </span>
+    </div>
+    <div matDialogActions class="col-12">
+        <button (click)="chiudi()" class="btn btn-primary"  >
+            Chiudi
+        </button>
+    </div>
+</div>
